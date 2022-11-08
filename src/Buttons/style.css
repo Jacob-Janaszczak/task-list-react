@@ -1,0 +1,118 @@
+.hiddenButton1{
+    justify-self: center;
+    padding: 3px;
+    margin-bottom: 5px;
+    justify-self: center;
+    background-color: rgba(23, 221, 162, 0.637);
+    box-shadow: 1px 5px 15px -2px;
+    font-size: 15px;
+    font-weight: 900;
+    color: white;
+    border: 0;
+    height: 30px;
+    width: 700px;
+    cursor: pointer;
+}
+
+.hiddenButton1:hover {
+    background-color: rgba(23, 221, 162, 0.479);
+    transform: scale(0.95);
+}
+
+@media (max-width: 680px) {
+    .hiddenButton1 {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 450px) {
+    .hiddenButton1 {
+        width: 300px;
+    }
+}
+
+.hiddenButton1:disabled {
+    background-color: rgba(160, 158, 158, 0.479);
+}
+.hiddenButton1:disabled:hover {
+    background-color: rgba(160, 158, 158, 0.384);
+    transform: scale(1);
+}
+
+.hiddenButton2{
+    justify-self: center;
+    padding: 3px;
+    margin-bottom: 10px;
+    justify-self: center;
+    background-color: rgba(23, 221, 162, 0.637);
+    box-shadow: 1px 5px 15px -2px;
+    font-size: 15px;
+    font-weight: 900;
+    color: white;
+    border: 0;
+    height: 30px;
+    width: 700px;
+    cursor: pointer;
+}
+
+.hiddenButton2:hover {
+    background-color: rgba(23, 221, 162, 0.479);
+    transform: scale(0.95);
+}
+
+@media (max-width: 680px) {
+    .hiddenButton2 {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 450px) {
+    .hiddenButton2 {
+        width: 300px;
+    }
+}
+
+.hiddenButton2:disabled {
+    background-color: rgba(160, 158, 158, 0.479);
+}
+.hiddenButton2:disabled:hover {
+    background-color: rgba(160, 158, 158, 0.384);
+    transform: scale(1);
+}
+
+.button_deleteAll {
+    padding: 3px;
+    margin-bottom: 15px;
+    justify-self: center;
+    background-color: rgba(248, 16, 16, 0.726);
+    box-shadow: 1px 5px 15px -2px;
+    font-size: 15px;
+    font-weight: 900;
+    color:  white;
+    border: 0;
+    height: 30px;
+    width: 700px;
+    cursor: pointer;
+}
+
+.button_deleteAll:hover {
+    transform: scale(1.02);
+    background-color: rgb(248, 16, 16);
+}
+
+.button_deleteAll:active {
+    transform: scale(1.04);
+    
+}
+
+@media (max-width: 680px) {
+    .button_deleteAll {
+        max-width: 400px;
+    }
+}
+
+@media (max-width: 450px) {
+    .button_deleteAll {
+        width: 300px;
+    }
+}
