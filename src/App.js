@@ -43,13 +43,21 @@ function App() {
     setTasks(tasks => [...tasks,{content: newTaskContent, done: false, id: tasks.length === 0 ? 1 : tasks[tasks.length - 1].id +1,}, ] )
   };
 
+  const deleteAllTask = () => {
+    if (hideDone === true){
+      alert(`Masz ukryte zadania! Kliknij w "Pokaż ukończone zadania"`)
+    }else
+    
+    setTasks(tasks => tasks.filter(({done}) => done === false))
+  };
+
   return (
     <Container >
       <Section header={<h1 className="taskList__header">Lista zadań</h1>} />
       <Form addNewTask={addNewTask} />
       <Section header={<p className="list__head--title">Twoja lista zadań </p>} />
       <Tasks tasks={tasks} hideDone={hideDone} removeTask={removeTask} toggleTaskDone={toggleTaskDone} />
-      <Buttons tasks={tasks} hideDone={hideDone} toggleHideDone={toggleHideDone} setAllDone={setAllDone}  />
+      <Buttons tasks={tasks} hideDone={hideDone} toggleHideDone={toggleHideDone} setAllDone={setAllDone} deleteAllTask={deleteAllTask}  />
       <Footer />
     </Container>
 
