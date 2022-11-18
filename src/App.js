@@ -24,13 +24,24 @@ function App() {
     setTasks(tasks => tasks.filter(task => task.id !== id));
   };
 
+  const toggleTaskDone = (id) => {
+    setTasks(tasks => tasks.map(task => {
+      if (task.id === id) {
+        return { ...task, done: !task.done };
+      }
+
+      return task;
+
+    }))
+  };
+
   return (
     <Container >
       <Section header={<h1 className="taskList__header">Lista zadań</h1>} />
       <Form />
       <Section header={<p className="list__head--title">Twoja lista zadań </p>} />
-      <Tasks tasks={tasks} hideDone={hideDone} removeTask={removeTask}/>
-      <Buttons tasks={tasks} hideDone={hideDone} toggleHideDone={toggleHideDone} />
+      <Tasks tasks={tasks} hideDone={hideDone} removeTask={removeTask} toggleTaskDone={toggleTaskDone} />
+      <Buttons tasks={tasks} hideDone={hideDone} toggleHideDone={toggleHideDone}  />
       <Footer />
     </Container>
 
